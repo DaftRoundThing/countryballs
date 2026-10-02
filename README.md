@@ -5,27 +5,30 @@ territories, collected from the **[Polandball Wiki](https://polandball.miraheze.
 and stored here under predictable file names so they can be linked directly
 (for example from seed data of a football database project).
 
-## Naming
+## Layout and naming
 
 For a territory with slug `<slug>` (e.g. `vatican-city`):
 
 | File | Meaning |
 |---|---|
-| `<slug>ball-image.png` | the main countryball picture, e.g. `vatican-cityball-image.png` |
-| `<slug>ball-icon-<N>.png` | small icon variants, `N` = 1…4, e.g. `vatican-cityball-icon-2.png` |
+| `images/<slug>ball-image.png` | the main countryball picture, e.g. `images/vatican-cityball-image.png` |
+| `icons/<slug>ball-icon-<N>.png` | small icon variants, `N` = 1…4, e.g. `icons/vatican-cityball-icon-2.png` |
 
-Icons are mostly PNG, a few are animated **GIF** (`….gif`, kept as GIF so the
+Most files are PNG; a few are animated **GIF** (`….gif`, kept as GIF so the
 animation survives). Not every territory has every icon number or a main image.
+(`test/` only holds a placeholder used for checking links.)
 
-Direct link pattern:
+Direct link patterns:
 
 ```
-https://raw.githubusercontent.com/DaftRoundThing/countryballs/refs/heads/main/<file>
+https://raw.githubusercontent.com/DaftRoundThing/countryballs/refs/heads/main/images/<file>
+https://raw.githubusercontent.com/DaftRoundThing/countryballs/refs/heads/main/icons/<file>
 ```
 
 ## Provenance and changes
 
-[`SOURCES.csv`](SOURCES.csv) lists, for **every** file here, the exact URL it
+[`SOURCES.csv`](SOURCES.csv) lists, for **every** file here (by its
+repo-relative `path`, e.g. `images/vatican-cityball-image.png`), the exact URL it
 was downloaded from, the Polandball Wiki article it belongs to, its original
 format and what (if anything) was done to it. Authors of the individual
 images are credited on the wiki's own file pages, reachable from those
